@@ -1,0 +1,23 @@
+###################################
+# Syntax Coloring Map For CltMotor
+###################################
+
+###################################
+# Datatypes (KEYWORD1)
+###################################
+
+CltMotor KEYWORD1
+
+###################################
+# Methods and Functions (KEYWORD2)
+###################################
+
+Forward	KEYWORD2
+Reverse	KEYWORD2
+Speed	KEYWORD2
+Stop	KEYWORD2
+
+###################################
+# Constants (LITERAL1)
+###################################
+
