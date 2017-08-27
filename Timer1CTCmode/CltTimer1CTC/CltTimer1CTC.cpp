@@ -33,8 +33,11 @@ void CltTimer1CTC::initTOP(long microSeconds) { //us
 
 void CltTimer1CTC::attachInterrupt(void (*isr)()) {
   this->isrCallback = isr; // function pointer
-	// Set Timer1 interrupt mode (Set interrupt on OCR1A compare match)
+  // Set Timer1 interrupt mode (Set interrupt on OCR1A compare match)
   TIMSK1 |= _BV(OCIE1A);
 }
 
+void CltTimer1CTC::detachInterrupt()  {
+  TIMSK1 &= ~_BV(OCIE1A); 
+}
 #endif
