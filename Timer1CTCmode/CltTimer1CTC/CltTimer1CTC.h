@@ -14,8 +14,9 @@ class CltTimer1CTC
   public:
     void initTOP(long microSeconds);
     void attachInterrupt(void (*isr)());
-	  //static 不需要
-	  void (*isrCallback)();
+    void detachInterrupt();
+    //static 不需要
+    void (*isrCallback)();
 };
 
 // 沒有下一行會引發編譯錯誤: 'Timer1CTC' was not declared in this scope
