@@ -37,7 +37,8 @@ void CltTimer1CTC::attachInterrupt(void (*isr)()) {
   TIMSK1 |= _BV(OCIE1A);
 }
 
-void CltTimer1CTC::detachInterrupt()  {
+void CltTimer1CTC::detachInterrupt() {
+  TCCR1B &= ~(_BV(CS12) | _BV(CS11) | _BV(CS10));
   TIMSK1 &= ~_BV(OCIE1A); 
 }
 #endif
