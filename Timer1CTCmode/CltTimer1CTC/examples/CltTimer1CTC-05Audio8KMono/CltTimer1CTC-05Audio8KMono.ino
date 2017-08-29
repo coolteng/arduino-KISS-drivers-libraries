@@ -1,4 +1,4 @@
-// 改寫>https://playground.arduino.cc/Code/PCMAudio
+// 改寫>https://playground.arduino.cc/Code/PCMAudio(code by Michael Smith)
 // 開發簡易 Timer1 程式庫的實際應用例子
 // 作者：鄧崇林
 
