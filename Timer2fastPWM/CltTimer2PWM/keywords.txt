@@ -1,0 +1,6 @@
+Timer2PWM	KEYWORD1
+CltTimer2PWM	KEYWORD1
+initMode3	KEYWORD2
+putPgm2Sound	KEYWORD2
+putByte2Sound	KEYWORD2
+noClkSource	KEYWORD2
