@@ -8,8 +8,10 @@ class CltTimer2PWM
 {
   public:
     void initMode3(int pwmPin);
-	void putPgm2Sound(int soundPin, const unsigned char *cltPointer);
-	void putByte2Sound(int soundPin, byte sampleByte);
+    void putPgm2Sound(int soundPin, const unsigned char *cltPointer);
+    // overload method
+    void putPgm2Sound(int soundPin, const unsigned char (*cltPointer)[256]);
+    void putByte2Sound(int soundPin, byte sampleByte);
     void noClkSource();
 };
 
