@@ -29,14 +29,20 @@ CltTimer2PWM Timer2PWM;             // 簡易 Singleton Pattern
       }
     }
 	
-	  void CltTimer2PWM::putPgm2Sound(int soundPin, const unsigned char *cltPointer) {
+    void CltTimer2PWM::putPgm2Sound(int soundPin, const unsigned char *cltPointer) {
       if(soundPin==11)
         OCR2A = pgm_read_byte(cltPointer) ; // duty cycle of fast PWM
       else 
         OCR2B = pgm_read_byte(cltPointer) ; 
     }
-	
-	  void CltTimer2PWM::putByte2Sound(int soundPin, byte sampleByte) {
+    // overload putPgm2Sound mathod
+    void CltTimer2PWM::putPgm2Sound(int soundPin, const unsigned char (*cltPointer)[256]) {
+      if(soundPin==11)
+        OCR2A = pgm_read_byte(cltPointer) ; // duty cycle of fast PWM
+      else
+        OCR2B = pgm_read_byte(cltPointer) ; 
+    }
+    void CltTimer2PWM::putByte2Sound(int soundPin, byte sampleByte) {
       if(soundPin==11)
         OCR2A = sampleByte; // duty cycle of fast PWM
       else 
